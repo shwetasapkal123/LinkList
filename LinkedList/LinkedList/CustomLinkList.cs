@@ -19,7 +19,14 @@ namespace LinkedList
             if (this.head == null)
                 this.head = newNode;
             else
+               {
+                 Node temp = head;
+                  while (temp.next != null)
+                  {
+                    temp = temp.next;
+                   }
                 this.head.next = newNode;
+                }
             Console.WriteLine("Added in the List " + newNode.data);
         }
 
